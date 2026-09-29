@@ -3,6 +3,7 @@ import city from "./assets/city.jpg";
 import ManageData from "./components/ManageData";
 import ListRender from "./components/ListRender";
 import ConditionalRender from "./components/ConditionalRender";
+import ShowUserName from "./components/ShowUserName";
 
 
 function App() {
@@ -16,11 +17,14 @@ function App() {
 
         {/* Imagem importada de src/assets */}
         <img src={city} alt="Cidade" />
+        
 
       </div>
       <ManageData />
       <ListRender />
       <ConditionalRender />
+      {/* props */}
+      <ShowUserName name="Paulo" />
     </div>
   );
 }
