@@ -5,13 +5,14 @@ import ListRender from "./components/ListRender";
 import ConditionalRender from "./components/ConditionalRender";
 import ShowUserName from "./components/ShowUserName";
 import CarDetails from "./components/CarDetails";
-import Fragment from "./components/Fragment";
 import Container from "./components/Container";
 import ExecuteFunction from "./components/ExecuteFunction";
-
-
+import MessageState from "./components/MessageState";
+import { Fragment, useState } from "react";
 
 function App() {
+
+  const [message, setMessage] = useState();
 
   function showMessage() {
   console.log("Evento do componente pai");
@@ -76,6 +77,9 @@ function App() {
 
       {/* event as prop */}
       <ExecuteFunction myFunction={showMessage} />
+
+      <MessageState msg={message} />
+      
     </div>
   );
 }
