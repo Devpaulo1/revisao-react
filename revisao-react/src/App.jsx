@@ -8,6 +8,13 @@ import CarDetails from "./components/CarDetails";
 
 
 function App() {
+
+  const cars = [
+  { id: 1, brand: "Ferrari", color: "Amarelo", km: 0 },
+  { id: 2, brand: "KIA", color: "Branco", km: 200000 },
+  { id: 3, brand: "Renault", color: "Azul", km: 32000 },
+  ];
+  
   return (
     <div className="App">
       <h1>Seção 3</h1>
@@ -33,6 +40,17 @@ function App() {
       {/* reaproveitamento */}
       <CarDetails brand="VW" color="Vermelho" km={535} />
       <CarDetails brand="Fiat" color="Branco" km={0} />
+
+
+      
+      {cars.map((car) => (
+        <CarDetails
+          key={car.id}
+          brand={car.brand}
+          color={car.color}
+          km={car.km}
+        />
+      ))}
     </div>
   );
 }
