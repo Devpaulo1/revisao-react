@@ -9,10 +9,17 @@ import Container from "./components/Container";
 import ExecuteFunction from "./components/ExecuteFunction";
 import MessageState from "./components/MessageState";
 import { Fragment, useState } from "react";
+import ChangeMessageState from "./components/ChangeMessageState";
+
+
 
 function App() {
-
+  
   const [message, setMessage] = useState();
+
+  const handleMessage = (msg) => {
+  setMessage(msg);
+  };
 
   function showMessage() {
   console.log("Evento do componente pai");
@@ -79,7 +86,7 @@ function App() {
       <ExecuteFunction myFunction={showMessage} />
 
       <MessageState msg={message} />
-      
+      <ChangeMessageState handleMessage={handleMessage} />
     </div>
   );
 }
