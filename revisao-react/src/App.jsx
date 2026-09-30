@@ -90,6 +90,14 @@ function App() {
         </div>
       </Container>
 
+      <Container>
+        <ul>
+          <li>React</li>
+          <li>JavaScript</li>
+          <li>CSS</li>
+        </ul>
+      </Container>
+
       {/* Função do pai executada pelo filho */}
       <ExecuteFunction myFunction={showMessage} />
 
