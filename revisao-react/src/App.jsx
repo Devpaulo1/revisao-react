@@ -1,6 +1,5 @@
 import { Fragment, useState } from "react";
 import "./App.css";
-
 import city from "./assets/city.jpg";
 import CarDetails from "./components/CarDetails";
 import ChangeMessageState from "./components/ChangeMessageState";
@@ -11,6 +10,8 @@ import ListRender from "./components/ListRender";
 import ManageData from "./components/ManageData";
 import MessageState from "./components/MessageState";
 import ShowUserName from "./components/ShowUserName";
+import orbitalStation from "./assets/orbital-station.jpg";
+
 
 function App() {
   // Coleção utilizada para demonstrar componentização + map().
@@ -45,6 +46,12 @@ function App() {
 
         {/* Asset importado de src/assets */}
         <img src={city} alt="Cidade" />
+        
+
+        <img src={orbitalStation} alt="Estação orbital futurista" />
+
+        <img src="/orbital-station.jpg" alt="Estação orbital futurista" />
+        
       </div>
 
       {/* Variável comum x useState */}
@@ -104,7 +111,9 @@ function App() {
       {/* Lifting state */}
       <MessageState msg={message} />
       <ChangeMessageState handleMessage={handleMessage} />
+      
     </div>
+
   );
 }
 
