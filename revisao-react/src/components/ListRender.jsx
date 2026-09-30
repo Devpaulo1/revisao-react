@@ -27,6 +27,8 @@ const ListRender = () => {
         ))}
       </ul>
 
+      <p>Total de usuários: {users.length}</p>
+
       <ul>
         {users.map((user) => (
           <li key={user.id}>
